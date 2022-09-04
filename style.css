@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: rgb(233, 233, 233);
+}
+
+/* ===== Utilities Start ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+/* ===== Utilities End ===== */
+
+/* ===== Grid Work Start ===== */
+header {
+  padding: 25px 0;
+  background-color: #3b3b3b;
+  color: rgb(236, 236, 236);
+  margin-bottom: 50px;
+}
+
+.header-title h2 {
+  margin: auto;
+  text-align: center;
+  color: rgb(236, 236, 236);
+}
+
+.grid-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(3, 1fr); */
+  grid-auto-rows: 260px;
+  grid-auto-flow: dense;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.protrait {
+  grid-row: auto/ span 2;
+  overflow: hidden;
+}
+
+.landscape {
+  overflow: hidden;
+}
+
+.image-area {
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ===== Grid Work End ===== */
+
+/* ===== Animation Start ===== */
+.image-area::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.747);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-area:hover::before {
+  opacity: 1;
+}
+
+.social-icons {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.social-icons a {
+  color: white;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.image-area:hover .social-icons {
+  opacity: 1;
+  transform: scale(1.2) rotate(-180deg);
+}
+
+.image-area:hover a {
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.1s;
+  transform: scale(1.2) rotate(180deg);
+}
+
+/* .image-area img:hover {
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.1s;
+  transform: scale(1.2) rotate(1deg);
+} */
+/* ===== Animation End ===== */
+
+/* ===== footer css Start =====*/
+.footer {
+  background-color: #3b3b3b;
+  padding: 20px;
+  color: rgb(236, 236, 236);
+}
+
+.footer-style {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1rem;
+}
+.footer-social-icons i {
+  color: rgb(236, 236, 236);
+  font-size: 18px;
+}
+/* ===== footer css End =====*/

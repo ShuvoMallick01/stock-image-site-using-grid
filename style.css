@@ -48,6 +48,50 @@ body {
   margin: auto;
   padding: 10px;
 }
+
+.btn {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 25px;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary:hover {
+  color: var(--color-white);
+}
+
+.btn-primary:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--color-blue-500);
+  border-radius: 3px;
+}
+
+.btn-primary:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 3px;
+}
+
 /* ===== Utilities Class End ===== */
 
 /* ===== Grid Work Start ===== */
@@ -120,6 +164,12 @@ header {
 .image-author p {
   font-size: 14px;
   font-weight: 300;
+}
+
+.load-more-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
 }
 /* ===== Grid Work End ===== */
 

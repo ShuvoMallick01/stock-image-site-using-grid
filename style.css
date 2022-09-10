@@ -91,7 +91,6 @@ body {
   z-index: -1;
   border-radius: 3px;
 }
-
 /* ===== Utilities Class End ===== */
 
 /* ===== Grid Work Start ===== */
@@ -153,6 +152,7 @@ header {
   bottom: 0;
   left: 0;
   padding: 30px;
+  z-index: 2;
 }
 
 .image-author h4 {
@@ -181,6 +181,7 @@ header {
   background-color: rgba(37, 37, 37, 0.747);
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 
 .image-area:hover::before {
@@ -209,6 +210,7 @@ header {
 .image-area:hover .social-icons {
   opacity: 1;
   transform: scale(1.2) rotate(-180deg);
+  z-index: 2;
 }
 
 .image-area:hover a {
@@ -217,18 +219,11 @@ header {
   transform: scale(1.2) rotate(180deg);
 }
 
-.image-area:hover {
-  transition: all 0.5s ease-in-out;
-  transition-delay: 0.1s;
-  transform: scale(0.97);
-  z-index: 1;
-}
-
-/* .image-area img:hover {
+.image-area:hover img {
   transition: all 0.5s ease-in-out;
   transition-delay: 0.1s;
   transform: scale(1.2) rotate(1deg);
-} */
+}
 /* ===== Animation End ===== */
 
 /* ===== footer css Start =====*/
